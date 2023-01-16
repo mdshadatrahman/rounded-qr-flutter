@@ -1,6 +1,6 @@
 # rounded_qr
 
-An easy to use package for creating QR codes that can be rounded, and can have an image in the center.
+An easy to use package for creating QR codes that can be rounded, and can have an image in the center. (Null safe version of [rounded_qr](https://pub.dev/packages/rounded_qr))
 
 This package uses the actively maintained [qr](https://pub.dev/packages/qr) package under the hood.
 
