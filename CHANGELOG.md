@@ -1,3 +1,6 @@
+## [2.0.0] - 16-01-2023.
+
+- Null safety migration.
 ## [1.1.1] - 27-08-2020.
 
 - Fixed an issue where small lines between modules were visible.
