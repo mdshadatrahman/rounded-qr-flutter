@@ -179,4 +179,4 @@ class MyApp extends StatelessWidget {
 
 ## Licence
 
-This Flutter package is made available under a [MIT license](https://github.com/zino-hofmann/rounded-qr-flutter/blob/main/LICENSE).
+This Flutter package is made available under a [MIT license](https://github.com/mdshadatrahman/rounded-qr-flutter/blob/main/LICENSE).
