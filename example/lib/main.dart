@@ -29,8 +29,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: RoundedQR(
-          data: 'https://flutter.dev',
-          // image: const AssetImage('assets/aro_sohoj.png'),
+          data: 'shadat',
+          typeNumber: 4,
+          image: const AssetImage('assets/aro_sohoj.png'),
         ),
       ),
     );

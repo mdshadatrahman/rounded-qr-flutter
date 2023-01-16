@@ -30,7 +30,7 @@ class RoundedQRPainter extends CustomPainter {
     this.image,
   }) {
     // _qrCode = QrCode(typeNumber, errorCorrectLevel)..addData(data);
-    _qrCode = QrCode(4, QrErrorCorrectLevel.L)..addData(data);
+    _qrCode = QrCode(typeNumber, errorCorrectLevel)..addData(data);
   }
 
   @override

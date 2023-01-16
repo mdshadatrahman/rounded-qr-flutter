@@ -45,7 +45,7 @@ class RoundedQR extends StatefulWidget {
     Key? key,
     required this.data,
     this.size = 200,
-    this.typeNumber = 1,
+    this.typeNumber = 4,
     this.errorCorrectLevel = QrErrorCorrectLevel.M,
     this.quietZone = 4,
     this.moduleColor = Colors.black,
@@ -130,22 +130,26 @@ class _RoundedQRState extends State<RoundedQR> {
           );
         }
 
-        return CustomPaint(
-          size: Size(
-            widget.size!,
-            widget.size!,
-          ),
-          painter: RoundedQRPainter(
-            data: widget.data,
-            typeNumber: widget.typeNumber!,
-            errorCorrectLevel: widget.errorCorrectLevel!,
-            quietZone: widget.quietZone!,
-            moduleColor: widget.moduleColor!,
-            moduleRadius: widget.moduleRadius!,
-            backgroundColor: widget.backgroundColor!,
-            backgroundRadius: widget.backgroundRadius!,
-          ),
+        return CircularProgressIndicator(
+          color: widget.backgroundColor,
         );
+
+        // return CustomPaint(
+        //   size: Size(
+        //     widget.size!,
+        //     widget.size!,
+        //   ),
+        //   painter: RoundedQRPainter(
+        //     data: widget.data,
+        //     typeNumber: widget.typeNumber!,
+        //     errorCorrectLevel: widget.errorCorrectLevel!,
+        //     quietZone: widget.quietZone!,
+        //     moduleColor: widget.moduleColor!,
+        //     moduleRadius: widget.moduleRadius!,
+        //     backgroundColor: widget.backgroundColor!,
+        //     backgroundRadius: widget.backgroundRadius!,
+        //   ),
+        // );
       },
     );
   }
