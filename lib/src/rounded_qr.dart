@@ -13,38 +13,38 @@ class RoundedQR extends StatefulWidget {
   final String data;
 
   /// The size of the widget.
-  final double size;
+  final double? size;
 
   /// The QR code version (1 to 40).
-  final int typeNumber;
+  final int? typeNumber;
 
   /// The level or error correction.
-  final int errorCorrectLevel;
+  final int? errorCorrectLevel;
 
   /// The number of modules used for the quit zone.
-  final int quietZone;
+  final int? quietZone;
 
   /// The color of the modules.
   /// NOTE: The modules need to be darker then the background to make sure all QR code scanners can read it correctly.
-  final Color moduleColor;
+  final Color? moduleColor;
 
   /// The border radius of the modules.
-  final double moduleRadius;
+  final double? moduleRadius;
 
   /// The color of the background.
   /// NOTE: The modules need to be darker then the background to make sure all QR code scanners can read it correctly.
-  final Color backgroundColor;
+  final Color? backgroundColor;
 
   /// The border radius of the background.
-  final double backgroundRadius;
+  final double? backgroundRadius;
 
   /// Image in the center of the QR code.
-  final ImageProvider image;
+  final ImageProvider? image;
 
   RoundedQR({
-    Key key,
-    @required this.data,
-    this.size = 100,
+    Key? key,
+    required this.data,
+    this.size = 200,
     this.typeNumber = 1,
     this.errorCorrectLevel = QrErrorCorrectLevel.M,
     this.quietZone = 4,
@@ -63,7 +63,7 @@ class _RoundedQRState extends State<RoundedQR> {
   Future<ui.Image> _loadImage(BuildContext buildContext) async {
     final completer = Completer<ui.Image>();
 
-    final stream = widget.image.resolve(
+    final stream = widget.image!.resolve(
       ImageConfiguration(
         devicePixelRatio: MediaQuery.of(buildContext).devicePixelRatio,
       ),
@@ -88,18 +88,18 @@ class _RoundedQRState extends State<RoundedQR> {
     if (widget.image == null) {
       return CustomPaint(
         size: Size(
-          widget.size,
-          widget.size,
+          widget.size!,
+          widget.size!,
         ),
         painter: RoundedQRPainter(
           data: widget.data,
-          typeNumber: widget.typeNumber,
-          errorCorrectLevel: widget.errorCorrectLevel,
-          quietZone: widget.quietZone,
-          moduleColor: widget.moduleColor,
-          moduleRadius: widget.moduleRadius,
-          backgroundColor: widget.backgroundColor,
-          backgroundRadius: widget.backgroundRadius,
+          typeNumber: widget.typeNumber!,
+          errorCorrectLevel: widget.errorCorrectLevel!,
+          quietZone: widget.quietZone!,
+          moduleColor: widget.moduleColor!,
+          moduleRadius: widget.moduleRadius!,
+          backgroundColor: widget.backgroundColor!,
+          backgroundRadius: widget.backgroundRadius!,
         ),
       );
     }
@@ -113,18 +113,18 @@ class _RoundedQRState extends State<RoundedQR> {
         if (snapshot.hasData) {
           return CustomPaint(
             size: Size(
-              widget.size,
-              widget.size,
+              widget.size!,
+              widget.size!,
             ),
             painter: RoundedQRPainter(
               data: widget.data,
-              typeNumber: widget.typeNumber,
-              errorCorrectLevel: widget.errorCorrectLevel,
-              quietZone: widget.quietZone,
-              moduleColor: widget.moduleColor,
-              moduleRadius: widget.moduleRadius,
-              backgroundColor: widget.backgroundColor,
-              backgroundRadius: widget.backgroundRadius,
+              typeNumber: widget.typeNumber!,
+              errorCorrectLevel: widget.errorCorrectLevel!,
+              quietZone: widget.quietZone!,
+              moduleColor: widget.moduleColor!,
+              moduleRadius: widget.moduleRadius!,
+              backgroundColor: widget.backgroundColor!,
+              backgroundRadius: widget.backgroundRadius!,
               image: snapshot.data,
             ),
           );
@@ -132,18 +132,18 @@ class _RoundedQRState extends State<RoundedQR> {
 
         return CustomPaint(
           size: Size(
-            widget.size,
-            widget.size,
+            widget.size!,
+            widget.size!,
           ),
           painter: RoundedQRPainter(
             data: widget.data,
-            typeNumber: widget.typeNumber,
-            errorCorrectLevel: widget.errorCorrectLevel,
-            quietZone: widget.quietZone,
-            moduleColor: widget.moduleColor,
-            moduleRadius: widget.moduleRadius,
-            backgroundColor: widget.backgroundColor,
-            backgroundRadius: widget.backgroundRadius,
+            typeNumber: widget.typeNumber!,
+            errorCorrectLevel: widget.errorCorrectLevel!,
+            quietZone: widget.quietZone!,
+            moduleColor: widget.moduleColor!,
+            moduleRadius: widget.moduleRadius!,
+            backgroundColor: widget.backgroundColor!,
+            backgroundRadius: widget.backgroundRadius!,
           ),
         );
       },
