@@ -1,7 +1,7 @@
-name: rounded_qr
+name: rounded_qr_nullsafety
 description: An easy to use package for creating QR codes that can be rounded, and can have an image in the center.
-version: 1.1.1
-homepage: https://github.com/zino-hofmann/rounded-qr-flutter
+version: 2.0.0
+homepage: https://github.com/mdshadatrahman/rounded-qr-flutter
 
 environment:
   sdk: ">=2.18.6 <3.0.0"

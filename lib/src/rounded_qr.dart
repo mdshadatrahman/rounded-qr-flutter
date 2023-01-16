@@ -6,7 +6,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:qr/qr.dart';
 
-import 'package:rounded_qr/src/rounded_qr_painter.dart';
+import 'package:rounded_qr_nullsafety/src/rounded_qr_painter.dart';
 
 class RoundedQR extends StatefulWidget {
   /// The data to be encoded inside the QR code.
