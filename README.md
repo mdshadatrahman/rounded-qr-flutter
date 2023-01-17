@@ -6,7 +6,7 @@ This package uses the actively maintained [qr](https://pub.dev/packages/qr) pack
 
 ## Usage
 
-![Screenshot_1673927026](https://user-images.githubusercontent.com/43848931/212805338-0ebcf53e-8fb3-492a-b924-d0444cd08292.png)
+<img src="https://user-images.githubusercontent.com/43848931/212805338-0ebcf53e-8fb3-492a-b924-d0444cd08292.png" width="200"/>
 
 ### Default
 
