@@ -12,24 +12,27 @@ By default the modules in the QR code will have rounded corners with a radius of
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
+            data: 'https://github.com/mdshadatrahman',
           ),
         ),
       ),
     );
   }
 }
+
 ```
 
 ### Squared
@@ -38,18 +41,20 @@ The radius of the modules is variable and can be removed completely by setting t
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
+            data: 'https://github.com/mdshadatrahman',
             moduleRadius: 0.0,
             backgroundRadius: 0.0,
           ),
@@ -58,33 +63,37 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 ```
 
 ### With image
 
-Adding an image to the center can be done by simply passing an `AssetImage` to the `image` parameter.
+Adding an image to the center can be done by simply passing an `NetworkImage` or `AssetImage` to the `image` parameter.
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
-            image: AssetImage('assets/images/flutter.png'),
+            data: 'https://github.com/mdshadatrahman',
+            image: const NetworkImage('https://avatars.githubusercontent.com/u/43848931?v=4'),
           ),
         ),
       ),
     );
   }
 }
+
 ```
 
 ### Custom colors
@@ -95,18 +104,20 @@ Both the module color and the background color can be changed by setting the `mo
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
+            data: 'https://github.com/mdshadatrahman',
             moduleColor: Colors.blue,
             backgroundColor: Colors.grey,
           ),
@@ -115,6 +126,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 ```
 
 ### QR version
@@ -123,18 +135,20 @@ The version can be changed to allow for more storage just by setting the `typeNu
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
+            data: 'https://github.com/mdshadatrahman',
             typeNumber: 17,
           ),
         ),
@@ -142,6 +156,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 ```
 
 ### Error correction
@@ -155,19 +170,21 @@ The error correction level can be changed to allow more data bytes to be restore
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:qr/qr.dart'; // we will import the [QrErrorCorrectLevel] from the qr package
-import 'package:rounded_qr/rounded_qr.dart';
+import 'package:rounded_qr_nullsafety/rounded_qr_nullsafety.dart';
+import 'package:qr/qr.dart';// we will import the [QrErrorCorrectLevel] from the qr package
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         body: Center(
           child: RoundedQR(
-            data: 'https://flutter.dev',
+            data: 'https://github.com/mdshadatrahman',
             errorCorrectLevel: QrErrorCorrectLevel.H,
           ),
         ),
@@ -175,6 +192,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 ```
 
 ## Licence
